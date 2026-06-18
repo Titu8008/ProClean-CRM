@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwashPro: Next-Generation Service Booking & CRM</title>
+    <style>
+        /* Base Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #334155; 
+            background: #f8fafc; 
+        }
+        
+        /* Layout Container */
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+        }
+        
+        /* Header Styling */
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem 0;
+        }
+        .header h1 { 
+            color: #0f172a; 
+            font-size: 2.5rem; 
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .header p { 
+            font-size: 1.125rem; 
+            max-width: 850px; 
+            margin: 0 auto; 
+            color: #475569;
+        }
+
+        /* Responsive Section Grid */
+        .section { 
+            display: flex; 
+            flex-direction: column; 
+            background: #ffffff; 
+            border-radius: 12px; 
+            padding: 2rem; 
+            margin-bottom: 2rem; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); 
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Desktop side-by-side layout */
+        @media (min-width: 992px) {
+            .section.row { flex-direction: row; align-items: center; gap: 3rem; }
+            .section.row.reverse { flex-direction: row-reverse; }
+            .section.row > .text-content { flex: 1; }
+            .section.row > .image-content { flex: 1.2; }
+        }
+
+        /* Content Styling */
+        h2 { 
+            color: #1e293b; 
+            margin-bottom: 1.5rem; 
+            font-size: 1.75rem; 
+            border-bottom: 2px solid #e2e8f0; 
+            padding-bottom: 0.5rem; 
+        }
+        p { margin-bottom: 1rem; }
+        ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.75rem; }
+        strong { color: #0f172a; }
+
+        /* Responsive Images */
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+            border: 1px solid #cbd5e1; 
+            display: block; 
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+            width: 100%;
+        }
+
+        /* Advanced Features Grid (No Images) */
+        .feature-grid-container {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            padding: 0;
+            margin-top: 3rem;
+        }
+        .feature-grid-container h2 {
+            text-align: center;
+            border-bottom: none;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr 1fr; }
+        }
+        .feature-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border-top: 4px solid #3b82f6;
+        }
+        .feature-card h3 {
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+        .feature-card p {
+            margin: 0;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section Styling */
+        .cta-section {
+            background-color: #0f172a;
+            color: #f8fafc;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+        .cta-section h2 {
+            color: #f8fafc;
+            border-bottom: none;
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            font-size: 1.125rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: background-color 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>The Platform: Next-Generation Service Booking & CRM</h1>
+        <p>Designed specifically for service-based professionals, our platform is a complete operational command center. We seamlessly connect automated online booking and instant quoting directly to a secure, centralized CRM—empowering you to stop chasing leads, close the gap between quote and payment, and run a more profitable business.</p>
+    </header>
+
+    <section class="section row">
+        <div class="text-content">
+            <h2>Approach A: The "Iframe Widget"</h2>
+            <p>The booking engine can be hosted as a standalone portal or injected into any existing website (Wix, WordPress, Squarespace) via a secure, drop-in Iframe.</p>
+            <ul>
+                <li><strong>Data Sync:</strong> Automatically retrieves precise property data (like square footage) as customers type their address.</li>
+                <li><strong>Instant Quoting:</strong> Calculates exact cost and estimated duration in real-time.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="ApproachA.png" alt="Approach A: Iframe Widget">
+        </div>
+    </section>
+    
+    <section class="section row reverse">
+        <div class="text-content">
+            <h2>Approach B: The "Hosted Portal"</h2>
+            <p>A client-facing engine designed to maximize conversion rates through a frictionless, transparent checkout process.</p>
+            <ul>
+                <li><strong>Dynamic Discounts:</strong> Intelligently applies and displays multi-service discounts dynamically.</li>
+                <li><strong>Stripe Checkout:</strong> Highly secure, PCI-compliant payment gateway built directly into the flow.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="ApproachB.png" alt="Approach B: Hosted Portal">
+        </div>
+    </section>
+
+    <section class="section row">
+        <div class="text-content">
+            <h2>Administrative Command Center</h2>
+            <ul>
+                <li><strong>Centralized Control:</strong> Manage operations, customize rules, and track business growth.</li>
+                <li><strong>Key Metrics:</strong> Real-time data including active jobs, MTD revenue, and customer satisfaction scores.</li>
+                <li><strong>Visual Analytics:</strong> Easy-to-read charts tracking weekly revenue fluctuations and service distribution.</li>
+                <li><strong>Intuitive Navigation:</strong> Quick access to Jobs, Leads & Traffic, Team Members, Scheduling, and Settings.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="Dashboard.png" alt="Dashboard Analytics">
+        </div>
+    </section>
+
+    <section class="section row reverse">
+        <div class="text-content">
+            <h2>Job Operations Control</h2>
+            <ul>
+                <li><strong>Centralized Tracking:</strong> Monitor active cleaning contracts, track processing actions, and handle transaction balances from a single screen.</li>
+                <li><strong>Comprehensive Details:</strong> Displays unique invoice numbers, customer contact info, and current operational state.</li>
+                <li><strong>Actionable Management:</strong> Direct control over the job's status to collect payments, put/release holds, or complete scopes.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="jobs.png" alt="Job Operations Control">
+        </div>
+    </section>
+
+    <section class="section row">
+        <div class="text-content">
+            <h2>Service & Rate Factors</h2>
+            <ul>
+                <li><strong>Dynamic Pricing Control:</strong> Provides vendors with total control over the mathematical formulas used to price their jobs.</li>
+                <li><strong>Granular Configuration:</strong> Independently configure custom base rates, square-footage multipliers, fixed-fee charges, and time estimates.</li>
+                <li><strong>Streamlined Actions:</strong> Quickly add new services, toggle active visibility, and set the customer-facing display order.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="services.png" alt="Service and Rate Factors">
+        </div>
+    </section>
+
+    <section class="section row reverse">
+        <div class="text-content">
+            <h2>Dispatch & Schedule</h2>
+            <ul>
+                <li><strong>Automated Slot Reservation:</strong> Automatically reserves the exact calendar slots required to complete a secured job.</li>
+                <li><strong>Visual Calendar:</strong> A comprehensive weekly calendar view that clearly displays color-coded job blocks and tallies daily working hours.</li>
+                <li><strong>Intuitive Drag-and-Drop:</strong> Easily reorganize the fleet's workload to reschedule assignments or dispatch specific units.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="schedule.png" alt="Dispatch and Schedule">
+        </div>
+    </section>
+
+    <section class="section row">
+        <div class="text-content">
+            <h2>System Setup & Branding</h2>
+            <ul>
+                <li><strong>Custom Branding:</strong> Businesses can maintain their unique identity by easily managing customer-facing UI, logos, and color palettes.</li>
+                <li><strong>Core Business Definition:</strong> Define operational scope by selecting specific industry types (e.g., "Softwash / Roof Cleaning").</li>
+                <li><strong>Operational Toggles:</strong> Granular control over features like toggling the automated "Property Data Lookup" on or off.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="settings.png" alt="System Setup and Branding">
+        </div>
+    </section>
+
+    <section class="section feature-grid-container">
+        <h2>Advanced Operational Tools</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Promo Codes & Marketing</h3>
+                <p>Drive seasonal revenue with custom promotional codes. Easily track campaign success and automatically apply percentage or flat-rate discounts at checkout to incentivize bookings.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Dynamic Location Factors</h3>
+                <p>Intelligently manage your service areas. The system accounts for location-based factors, ensuring your pricing and availability always align perfectly with the job's distance or territory.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Consumable Estimates</h3>
+                <p>Protect your profit margins by accurately predicting material costs. The system automatically calculates consumable estimates (like chemical mixes or water usage) based on the exact scope and square footage of the job.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Role-Based Access Control</h3>
+                <p>Keep your data secure and your team focused. The dashboard dynamically adjusts its menus and visibility based on the user's specific role—giving field technicians exactly what they need while protecting admin-level financials.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <h2>Ready to Transform Your Service Business?</h2>
+        <p>Stop chasing leads and start capturing fully paid, scheduled jobs while you sleep. Let's discuss a partnership or integration today.</p>
+        <a href="mailto:your-email@example.com" class="btn">Get in Touch</a>
+    </section>
+
+</div>
+
+</body>
+</html>
